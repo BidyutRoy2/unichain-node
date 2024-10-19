@@ -5,13 +5,13 @@
 </p>
 
 
-### Install Node
+## Install Node
 ```
 source <(wget -O - https://raw.githubusercontent.com/BidyutRoy2/unichain-node/refs/heads/main/node.sh)
 ```
 
-### Direct Go Edit env File & Set RPC Sepolia & Beacon API
-- Use Arrow Key Up/Down/Left/Right (Save : CTRL + X + Y Then Enter)
+### You Go To Direct Edit env File & Set RPC Sepolia & Beacon API
+- Use Arrow Key Up/Down/Left/Right (Save: CTRL+X Then Y Then Enter)
 
 Get L1 RPC : https://drpc.org?ref=186ce1
 - Create Account & Create API Keys >
@@ -24,13 +24,27 @@ Get Public beacon endpoints : https://ethereum-sepolia.publicnode.com
 <img src='2024-10-20_030858.jpg' style="width:800px;height:300px;">
 </p>
 
-### Run Node
+## Run Node
 ```
 docker compose up -d
 ```
 
+## Check Docker Unichain Node Container
+```
+docker ps -a
+```
+### Copy Container ID - unichain-node-execution-client-1
 
-Delete/Remove Unichain Node File
+Check Node Logs
+```
+docker logs -f Container ID
+```
+OR 
+```
+docker logs Container ID
+```
+
+Future Stop Delete/Remove Unichain Node File
 ```
 docker stop $(docker ps -aqf "name=unichain-node") && docker rm $(docker ps -aqf "name=unichain-node")
 ```
