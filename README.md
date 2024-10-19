@@ -5,7 +5,7 @@
 </p>
 
 
-## Install Node
+## Install Node Your WSL/VPS 
 ```
 source <(wget -O - https://raw.githubusercontent.com/BidyutRoy2/unichain-node/refs/heads/main/node.sh)
 ```
@@ -44,6 +44,12 @@ OR
 docker logs Container ID
 ```
 
+## Node Directory/Folder
+```
+cd unichain-node
+```
+
+---------------------------------------------------------------------------------------------------------------
 Future Stop Delete/Remove Unichain Node File
 ```
 docker stop $(docker ps -aqf "name=unichain-node") && docker rm $(docker ps -aqf "name=unichain-node")
